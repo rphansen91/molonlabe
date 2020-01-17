@@ -1,0 +1,37 @@
+{
+  "name": "@molonlabe/spartan-stores",
+  "version": "1.0.0",
+  "description": "",
+  "main": "dist/index.umd.js",
+  "module": "dist/index.es5.js",
+  "typings": "dist/types/index.d.ts",
+  "scripts": {
+    "prebuild": "rimraf dist",
+    "build": "tsc --module commonjs && rollup -c rollup.config.js",
+    "start": "rollup -c rollup.config.ts -w"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "apollo-server": "^2.9.16",
+    "debug": "^4.1.1",
+    "firebase-admin": "^8.9.1",
+    "graphql": "^14.5.8",
+    "graphql-tag": "^2.10.1",
+    "lodash": "^4.17.15",
+    "mongodb": "^3.5.0"
+  },
+  "devDependencies": {
+    "@types/mongodb": "^3.3.14",
+    "rimraf": "^3.0.0",
+    "rollup": "^0.67.0",
+    "rollup-plugin-commonjs": "^9.1.8",
+    "rollup-plugin-json": "^3.1.0",
+    "rollup-plugin-node-resolve": "^3.4.0",
+    "rollup-plugin-sourcemaps": "^0.4.2",
+    "rollup-plugin-typescript2": "^0.18.0",
+    "typedoc": "^0.12.0",
+    "typescript": "^3.0.3"
+  }
+}

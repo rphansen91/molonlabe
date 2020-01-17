@@ -6,7 +6,8 @@
         "typescript",
         "typescript-operations",
         "typescript-resolvers",
-        "@molonlabe/spartan-auth"
+        "@molonlabe/spartan-auth",
+        "@molonlabe/spartan-stores"
       ]
     }
   }
