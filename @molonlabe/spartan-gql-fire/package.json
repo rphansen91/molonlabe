@@ -1,6 +1,6 @@
 {
   "name": "@molonlabe/spartan-gql-fire",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "main": "dist/index.umd.js",
   "module": "dist/index.es5.js",
   "typings": "dist/types/index.d.ts",
@@ -20,7 +20,7 @@
   "description": "",
   "dependencies": {
     "@molonlabe/spartan-auth": "1.0.0",
-    "@molonlabe/spartan-stores": "1.0.0",
+    "@molonlabe/spartan-stores": "1.0.7",
     "@molonlabe/spartan-utils": "1.0.0",
     "@types/lodash": "^4.14.149",
     "apollo-server": "^2.9.16",
