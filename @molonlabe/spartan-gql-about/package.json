@@ -1,6 +1,6 @@
 {
   "name": "@molonlabe/spartan-gql-about",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "main": "dist/index.umd.js",
   "module": "dist/index.es5.js",
   "typings": "dist/types/index.d.ts",
@@ -8,7 +8,7 @@
     "dist"
   ],
   "scripts": {
-    "build": "tsc --module commonjs && rollup -c rollup.config.js",
+    "build": "yarn generate && tsc --module commonjs && rollup -c rollup.config.js",
     "start": "rollup -c rollup.config.ts -w",
     "test": "echo \"Error: no test specified\" && exit 1",
     "generate": "graphql-codegen",
