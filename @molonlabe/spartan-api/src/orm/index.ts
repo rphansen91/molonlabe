@@ -1,6 +1,6 @@
 import { ThenArg } from '@molonlabe/spartan-utils';
 import { firestore, auth as fireAuth } from 'firebase-admin';
-import { mongoCollectionFactory, firebaseCollectionFactory } from '../types';
+import { firebaseCollectionFactory } from '../types';
 import { authPermissions } from './user';
 import { Db } from 'mongodb';
 
@@ -11,7 +11,7 @@ export async function ormFactory(
   app: firestore.Firestore,
   auth: fireAuth.Auth
 ) {
-  const mongo = mongoCollectionFactory(db);
+  // const mongo = mongoCollectionFactory(db);
   const firebase = firebaseCollectionFactory(app);
   return {
     authPermissions: authPermissions(app),

@@ -1,2 +1,1 @@
-export * from "./graphql.generated";
-export * from "./graphql.client";
+export * from './graphql.client';
