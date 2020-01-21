@@ -1,16 +1,12 @@
-import gql from "graphql-tag";
+import gql from 'graphql-tag';
 
 gql`
-  query Empty {
-    empty
-  }
-`;
-
-gql`
-  query Customer {
-    customer {
-      id
-      email
+  query About {
+    about {
+      git {
+        url
+        sha
+      }
     }
   }
 `;
