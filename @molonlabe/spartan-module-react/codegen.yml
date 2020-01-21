@@ -1,0 +1,12 @@
+schema: '${SCHEMA:http://localhost:9000}'
+documents: ./src/**/*.ts
+overwrite: true
+generates:
+  ./src/graphql.generated.tsx:
+    plugins:
+      - typescript
+      - typescript-operations
+      - typescript-react-apollo
+  ./src/hooks.generated.tsx:
+    plugins:
+      - apollo-hooks-codegen

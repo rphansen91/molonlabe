@@ -1,33 +1,87 @@
 {
   "name": "@molonlabe/spartan-module-react",
-  "version": "1.0.0",
-  "description": "",
-  "main": "dist/index.umd.js",
-  "module": "dist/index.es5.js",
-  "typings": "dist/types/index.d.ts",
+  "version": "0.1.0",
+  "private": true,
+  "main": "build/index.umd.js",
+  "module": "build/index.es5.js",
+  "typings": "build/lib/index.d.ts",
   "files": [
-    "dist"
+    "build"
   ],
   "scripts": {
-    "prebuild": "rimraf dist",
-    "build": "tsc --module commonjs && rollup -c rollup.config.js",
-    "start": "rollup -c rollup.config.ts -w"
+    "start": "react-scripts start",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject",
+    "build": "rm -rf build && tsc --module commonjs && rollup -c rollup.config.ts",
+    "storybook": "start-storybook -p 6006",
+    "build-storybook": "build-storybook",
+    "generate": "graphql-codegen"
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
   "dependencies": {
-    "lodash": "^4.17.15"
+    "apollo-cache-inmemory": "^1.6.2",
+    "apollo-client": "^2.6.3",
+    "apollo-link-context": "^1.0.18",
+    "apollo-link-http": "^1.5.15",
+    "graphql": "^14.4.2",
+    "graphql-tag": "^2.10.1",
+    "react": "^16.8.6",
+    "react-apollo": "^2.5.8",
+    "react-dom": "^16.8.6",
+    "react-scripts": "3.0.1"
   },
   "devDependencies": {
-    "rimraf": "^3.0.0",
-    "rollup": "^0.67.0",
-    "rollup-plugin-commonjs": "^9.1.8",
+    "@babel/core": "^7.5.5",
+    "@graphql-codegen/cli": "^1.4.0",
+    "@graphql-codegen/typescript": "^1.4.0",
+    "@graphql-codegen/typescript-operations": "^1.4.0",
+    "@graphql-codegen/typescript-react-apollo": "^1.4.0",
+    "@storybook/addon-actions": "^5.1.9",
+    "@storybook/addon-info": "^5.1.9",
+    "@storybook/addon-knobs": "^5.1.9",
+    "@storybook/addon-links": "^5.1.9",
+    "@storybook/addons": "^5.1.9",
+    "@storybook/react": "^5.1.9",
+    "@types/graphql": "^14.2.3",
+    "@types/jest": "^24.0.15",
+    "@types/node": "12.6.8",
+    "@types/react": "16.8.23",
+    "@types/react-dom": "16.8.5",
+    "@types/storybook__addon-knobs": "^5.0.3",
+    "@types/storybook__react": "^4.0.2",
+    "apollo-hooks-codegen": "^1.2.0",
+    "awesome-typescript-loader": "^5.2.1",
+    "babel-loader": "^8.0.6",
+    "graphql-code-generator": "^0.18.2",
+    "jest": "^24.8.0",
+    "react-docgen-typescript-loader": "^3.1.0",
+    "rollup": "^1.2.2",
+    "rollup-plugin-commonjs": "^9.2.0",
     "rollup-plugin-json": "^3.1.0",
-    "rollup-plugin-node-resolve": "^3.4.0",
+    "rollup-plugin-node-resolve": "^4.0.0",
+    "rollup-plugin-replace": "^2.1.1",
     "rollup-plugin-sourcemaps": "^0.4.2",
-    "rollup-plugin-typescript2": "^0.18.0",
-    "typedoc": "^0.12.0",
-    "typescript": "^3.0.3"
+    "rollup-plugin-typescript2": "^0.19.2",
+    "ts-jest": "^24.0.2",
+    "typescript": "^3.5.3"
+  },
+  "tslintConfig": {
+    "extends": "react-app",
+    "linterOptions": {
+      "exclude": [
+        "./src/**/*.generated.tsx"
+      ]
+    }
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
   }
 }
