@@ -1,0 +1,27 @@
+version: '3'
+services:
+  mongo:
+    image: mongo:latest
+    volumes:
+      - db-data:/data/db
+      - mongo-config:/data/configdb
+  spartan.api:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - '${PORT}:8080'
+    environment:
+      - PORT=8080
+      - DEBUG=${DEBUG}
+      - ABOUT_NAME=${ABOUT_NAME}
+      - ABOUT_GIT_URL=${ABOUT_GIT_URL}
+      - ABOUT_GIT_SHA=${ABOUT_GIT_SHA}
+      - MONGO_URI=mongodb://mongo:27017
+      - MONGO_NAME=test
+      - GOOGLE_APPLICATION_CREDENTIALS=/usr/src/app/service_account.json
+    volumes:
+      - ${GOOGLE_APPLICATION_CREDENTIALS:?Service account path must be provided as GOOGLE_APPLICATION_CREDENTIALS}:/usr/src/app/service_account.json
+volumes:
+  db-data:
+  mongo-config:

@@ -1,0 +1,17 @@
+{
+  "schema": "./src/gql/**/schema.ts",
+  "generates": {
+    "./src/types.ts": {
+      "plugins": [
+        "typescript",
+        "typescript-operations",
+        "typescript-resolvers",
+        "@molonlabe/spartan-auth",
+        "@molonlabe/spartan-stores",
+        "@molonlabe/spartan-gql-auth",
+        "@molonlabe/spartan-gql-about",
+        "@molonlabe/spartan-gql-fire"
+      ]
+    }
+  }
+}
