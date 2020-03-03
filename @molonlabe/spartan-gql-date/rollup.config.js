@@ -24,8 +24,10 @@ export default {
   external: [
     'graphql',
     'graphql-tag',
+    'firebase-admin',
     'merge-graphql-schemas',
-    '@molonlabe/spartan-utils',
+    '@molonlabe/spartan-auth',
+    '@molonlabe/spartan-stores',
   ],
   watch: {
     include: 'src/**',

@@ -1,7 +1,11 @@
 #!/usr/bin/env node
 
 import commander from 'commander';
-import { generateModule, generateModuleReact } from './generateModule';
+import {
+  generateApi,
+  generateModule,
+  generateModuleReact,
+} from './generateModule';
 const pkg = require('../package.json');
 
 commander.version(pkg.version);
@@ -39,12 +43,14 @@ commander
   .description('Generate a sparta type')
   .action((type, name) => {
     switch (type) {
+      case 'api':
+        return generateApi(name);
       case 'react':
         return generateModuleReact(name);
       case 'module':
         return generateModule(name);
       default:
-        throw new Error(`${type} invalid: One of 'react'|'module'`);
+        throw new Error(`${type} invalid: One of 'api'|'react'|'module'`);
     }
   });
 

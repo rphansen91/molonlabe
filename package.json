@@ -12,6 +12,8 @@
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
+    "bootstrap": "lerna bootstrap",
+    "release": "lerna publish",
     "start": "npm-run-all start:*",
     "build": "npm-run-all build:*",
     "publish-all": "npm-run-all publish:*",
@@ -23,6 +25,7 @@
     "start:gql-about": "npm --prefix @molonlabe/spartan-gql-about run start",
     "start:gql-auth": "npm --prefix @molonlabe/spartan-gql-auth run start",
     "start:gql-fire": "npm --prefix @molonlabe/spartan-gql-fire run start",
+    "start:gql-date": "npm --prefix @molonlabe/spartan-gql-date run start",
     "start:stores": "npm --prefix @molonlabe/spartan-stores run start",
     "start:utils": "npm --prefix @molonlabe/spartan-utils run start",
     "build:api": "npm --prefix @molonlabe/spartan-api run build",
@@ -32,6 +35,7 @@
     "build:gql-about": "npm --prefix @molonlabe/spartan-gql-about run build",
     "build:gql-auth": "npm --prefix @molonlabe/spartan-gql-auth run build",
     "build:gql-fire": "npm --prefix @molonlabe/spartan-gql-fire run build",
+    "build:gql-date": "npm --prefix @molonlabe/spartan-gql-date run build",
     "build:stores": "npm --prefix @molonlabe/spartan-stores run build",
     "build:utils": "npm --prefix @molonlabe/spartan-utils run build",
     "publish:api": "cd @molonlabe/spartan-api && yarn publish --access public && cd ..",
@@ -41,6 +45,7 @@
     "publish:gql-about": "cd @molonlabe/spartan-gql-about && yarn publish --access public && cd ..",
     "publish:gql-auth": "cd @molonlabe/spartan-gql-auth && yarn publish --access public && cd ..",
     "publish:gql-fire": "cd @molonlabe/spartan-gql-fire && yarn publish --access public && cd ..",
+    "publish:gql-date": "cd @molonlabe/spartan-gql-date && yarn publish --access public && cd ..",
     "publish:stores": "cd @molonlabe/spartan-stores && yarn publish --access public && cd ..",
     "publish:utils": "cd @molonlabe/spartan-utils && yarn publish --access public && cd .."
   },
@@ -49,6 +54,7 @@
   "devDependencies": {
     "@types/node": "^13.1.7",
     "dotenv-cli": "^3.1.0",
+    "lerna": "^3.20.2",
     "nodemon": "^2.0.2",
     "npm-run-all": "^4.1.5",
     "rimraf": "^3.0.0",

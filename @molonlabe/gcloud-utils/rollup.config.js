@@ -21,12 +21,7 @@ export default {
     { file: pkg.module, format: 'es', sourcemap: true },
   ],
   // Indicate here external modules you don't wanna include in your bundle (i.e.: 'lodash')
-  external: [
-    'graphql',
-    'graphql-tag',
-    'merge-graphql-schemas',
-    '@molonlabe/spartan-utils',
-  ],
+  external: ['apollo-server', 'graphql'],
   watch: {
     include: 'src/**',
   },

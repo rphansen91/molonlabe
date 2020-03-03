@@ -1,0 +1,24 @@
+name: Firebase Functions
+
+on:
+  push:
+    branches:
+      - 'functions'
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    env:
+      PROJECT_ID: ${{secrets.PROJECT_ID}}
+      FIREBASE_TOKEN: ${{secrets.FIREBASE_TOKEN}}
+      APPLICATION_CREDENTIALS: ${{secrets.GOOGLE_APPLICATION_CREDENTIALS}}
+      GIT_SHA: ${GITHUB_SHA::8}
+    steps:
+      - uses: actions/checkout@v2
+      - uses: actions/setup-node@v1
+        with:
+          node-version: '10.x'
+      - name: Build
+        uses: actions-hub/gcloud@master
+        with:
+          args: builds submit --project ${PROJECT_ID} --substitutions=_FIREBASE_TOKEN=${FIREBASE_TOKEN}

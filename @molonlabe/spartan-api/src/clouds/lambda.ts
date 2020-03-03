@@ -1,7 +1,6 @@
 const debug = require('debug')('api');
 import { ApolloServer } from 'apollo-server-lambda';
 import { initializeApp } from 'firebase-admin';
-import lambda from 'aws-lambda';
 import buildServerConfig from '../config';
 import buildServerContext from '../context';
 import {
@@ -38,11 +37,7 @@ const resolveServer = (async () => {
   return apollo;
 })();
 
-export const handler = (
-  event: lambda.APIGatewayProxyEvent,
-  context: lambda.Context,
-  callback: lambda.APIGatewayProxyCallback
-) => {
+export const handler = (event: any, context: any, callback: any) => {
   context.callbackWaitsForEmptyEventLoop = false;
   resolveServer
     .then(server => server.createHandler(serverOptions))

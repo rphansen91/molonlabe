@@ -1,0 +1,35 @@
+name: Release
+
+on:
+  push:
+    branches:
+      - 'master'
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    env:
+      PROJECT_ID: ${{secrets.PROJECT_ID}}
+      APPLICATION_NAME: ${{secrets.APPLICATION_NAME}}
+      APPLICATION_CREDENTIALS: ${{secrets.GOOGLE_APPLICATION_CREDENTIALS}}
+      INSTANCE_TEMPLATE_TAGS: ${{secrets.INSTANCE_TEMPLATE_TAGS}}
+      CLOUDSDK_CORE_DISABLE_PROMPTS: 1
+    steps:
+      - uses: actions/checkout@v2
+      - uses: actions/setup-node@v1
+        with:
+          node-version: '10.x'
+      - name: Build Image
+        uses: actions-hub/gcloud@master
+        with:
+          args: builds submit --tag gcr.io/${PROJECT_ID}/${APPLICATION_NAME}:${GITHUB_SHA::8} functions --project ${PROJECT_ID}
+
+      - name: Create Instance Template
+        uses: actions-hub/gcloud@master
+        with:
+          args: beta compute instance-templates create-with-container ${APPLICATION_NAME}-${GITHUB_SHA::8} --project=${PROJECT_ID} --machine-type=n1-standard-1 --network=projects/${PROJECT_ID}/global/networks/default --network-tier=PREMIUM --metadata=google-logging-enabled=true --maintenance-policy=MIGRATE --scopes=https://www.googleapis.com/auth/devstorage.read_only,https://www.googleapis.com/auth/logging.write,https://www.googleapis.com/auth/monitoring.write,https://www.googleapis.com/auth/servicecontrol,https://www.googleapis.com/auth/service.management.readonly,https://www.googleapis.com/auth/trace.append --tags=${INSTANCE_TAGS} --image=cos-stable-80-12739-78-0 --image-project=cos-cloud --boot-disk-size=10GB --boot-disk-type=pd-standard --boot-disk-device-name=${APPLICATION_NAME}-${GITHUB_SHA::8} --container-image=gcr.io/${PROJECT_ID}/${APPLICATION_NAME}:${GITHUB_SHA::8} --container-restart-policy=always --container-env=^,@^GIT_SHA=${GITHUB_SHA::8} --labels=container-vm=cos-stable-80-12739-78-0
+
+      - name: Rolling Update
+        uses: actions-hub/gcloud@master
+        with:
+          args: beta compute instance-groups managed rolling-action start-update base86-prod-node-group --quiet --zone us-central1-a --project ${PROJECT_ID} --version template=base86-apollo-server-production-${GITHUB_SHA::8} --max-unavailable=0

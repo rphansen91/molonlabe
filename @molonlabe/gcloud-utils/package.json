@@ -1,0 +1,40 @@
+{
+  "name": "@molonlabe/gcloud-utils",
+  "version": "1.0.0",
+  "description": "",
+  "main": "dist/index.umd.js",
+  "module": "dist/index.es5.js",
+  "typings": "dist/types/index.d.ts",
+  "files": [
+    "dist"
+  ],
+  "bin": {
+    "sparta-gcloud": "dist/cli.js"
+  },
+  "scripts": {
+    "prebuild": "rimraf dist",
+    "build": "tsc --module commonjs && rollup -c rollup.config.js",
+    "start": "rollup -c rollup.config.ts -w"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "commander": "^4.1.1",
+    "googleapis": "^47.0.0",
+    "isomorphic-fetch": "^2.2.1",
+    "lodash": "^4.17.15"
+  },
+  "devDependencies": {
+    "@types/isomorphic-fetch": "^0.0.35",
+    "rimraf": "^3.0.0",
+    "rollup": "^0.67.0",
+    "rollup-plugin-commonjs": "^9.1.8",
+    "rollup-plugin-json": "^3.1.0",
+    "rollup-plugin-node-resolve": "^3.4.0",
+    "rollup-plugin-sourcemaps": "^0.4.2",
+    "rollup-plugin-typescript2": "^0.18.0",
+    "typedoc": "^0.12.0",
+    "typescript": "^3.0.3"
+  }
+}
