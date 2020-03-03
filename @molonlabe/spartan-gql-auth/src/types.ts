@@ -203,16 +203,3 @@ export function firebaseCollectionFactory (db: firestore.Firestore) {
 }
 
 
-
-import { Db as MongoDb } from 'mongodb';
-import { collectionCrud } from '@molonlabe/spartan-stores';
-
-export type IMongoCollections = ReturnType<typeof mongoCollectionFactory>;
-
-export function mongoCollectionFactory (db: MongoDb) {
-  
-
-  return {
-    
-  }
-}

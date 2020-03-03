@@ -7,7 +7,7 @@ export type Scalars = {
   Boolean: boolean,
   Int: number,
   Float: number,
-  FirebaseTimestamp: any,
+  Date: any,
 };
 
 
@@ -85,22 +85,22 @@ export type DirectiveResolverFn<TResult = {}, TParent = {}, TContext = {}, TArgs
 export type ResolversTypes = {
   String: ResolverTypeWrapper<Scalars['String']>,
   Boolean: ResolverTypeWrapper<Scalars['Boolean']>,
-  FirebaseTimestamp: ResolverTypeWrapper<Scalars['FirebaseTimestamp']>,
+  Date: ResolverTypeWrapper<Scalars['Date']>,
 };
 
 /** Mapping between all available schema types and the resolvers parents */
 export type ResolversParentTypes = {
   String: Scalars['String'],
   Boolean: Scalars['Boolean'],
-  FirebaseTimestamp: Scalars['FirebaseTimestamp'],
+  Date: Scalars['Date'],
 };
 
-export interface FirebaseTimestampScalarConfig extends GraphQLScalarTypeConfig<ResolversTypes['FirebaseTimestamp'], any> {
-  name: 'FirebaseTimestamp'
+export interface DateScalarConfig extends GraphQLScalarTypeConfig<ResolversTypes['Date'], any> {
+  name: 'Date'
 }
 
 export type Resolvers<ContextType = any> = {
-  FirebaseTimestamp?: GraphQLScalarType,
+  Date?: GraphQLScalarType,
 };
 
 
