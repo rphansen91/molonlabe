@@ -1,4 +1,6 @@
 {
-  "packages": ["@molonlabe/*"],
-  "version": "0.1.0"
+  "packages": [
+    "@molonlabe/*"
+  ],
+  "version": "0.1.1"
 }

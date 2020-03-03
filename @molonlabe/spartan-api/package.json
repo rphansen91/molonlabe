@@ -1,7 +1,7 @@
 {
   "public": true,
   "name": "@molonlabe/spartan-api",
-  "version": "1.0.0",
+  "version": "0.1.1",
   "main": "dist/index.js",
   "files": [
     "dist"
@@ -18,12 +18,12 @@
   "license": "ISC",
   "description": "",
   "dependencies": {
-    "@molonlabe/spartan-auth": "1.0.0",
-    "@molonlabe/spartan-gql-fire": "1.0.3",
+    "@molonlabe/spartan-auth": "^0.1.1",
     "@molonlabe/spartan-gql-about": "1.0.1",
-    "@molonlabe/spartan-gql-auth": "^1.0.2",
-    "@molonlabe/spartan-stores": "^1.0.7",
-    "@molonlabe/spartan-utils": "1.0.0",
+    "@molonlabe/spartan-gql-auth": "^0.1.1",
+    "@molonlabe/spartan-gql-fire": "^0.1.1",
+    "@molonlabe/spartan-stores": "^0.1.1",
+    "@molonlabe/spartan-utils": "^0.1.1",
     "@types/lodash": "^4.14.149",
     "apollo-server": "^2.9.16",
     "apollo-server-express": "^2.9.16",

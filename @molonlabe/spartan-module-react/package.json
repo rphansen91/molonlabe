@@ -1,6 +1,6 @@
 {
   "name": "@molonlabe/spartan-module-react",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "private": true,
   "main": "build/index.umd.js",
   "module": "build/index.es5.js",

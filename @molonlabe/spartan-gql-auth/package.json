@@ -1,6 +1,6 @@
 {
   "name": "@molonlabe/spartan-gql-auth",
-  "version": "1.0.2",
+  "version": "0.1.1",
   "main": "dist/index.umd.js",
   "module": "dist/index.es5.js",
   "typings": "dist/types/index.d.ts",
@@ -19,9 +19,9 @@
   "license": "ISC",
   "description": "",
   "dependencies": {
-    "@molonlabe/spartan-auth": "1.0.0",
-    "@molonlabe/spartan-stores": "^1.0.7",
-    "@molonlabe/spartan-utils": "1.0.0",
+    "@molonlabe/spartan-auth": "^0.1.1",
+    "@molonlabe/spartan-stores": "^0.1.1",
+    "@molonlabe/spartan-utils": "^0.1.1",
     "@types/lodash": "^4.14.149",
     "apollo-server": "^2.9.16",
     "apollo-server-express": "^2.9.16",
