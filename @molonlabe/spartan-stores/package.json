@@ -1,6 +1,6 @@
 {
   "name": "@molonlabe/spartan-stores",
-  "version": "0.1.1",
+  "version": "1.2.0",
   "description": "",
   "main": "dist/index.umd.js",
   "module": "dist/index.es5.js",
