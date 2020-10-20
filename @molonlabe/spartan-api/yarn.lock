@@ -949,6 +949,120 @@
     iterall "^1.1.3"
     uuid "^3.1.0"
 
+"@molonlabe/spartan-auth@^1.2.0":
+  version "1.2.0"
+  resolved "https://registry.yarnpkg.com/@molonlabe/spartan-auth/-/spartan-auth-1.2.0.tgz#63926d9bbc4395bf591ad55cb6e95715e05bd67d"
+  integrity sha512-KejAIBddU9BqDKmfYBJA74+e1mCgAfJHw/MDEJtIlmKinNdLyFhGjY10FV8nHfTAnwSMKP2a4BD7HQYLhfUASg==
+  dependencies:
+    apollo-server "^2.9.16"
+    graphql "^14.5.8"
+    graphql-tag "^2.10.1"
+    lodash "^4.17.15"
+
+"@molonlabe/spartan-gql-about@1.0.1":
+  version "1.0.1"
+  resolved "https://registry.yarnpkg.com/@molonlabe/spartan-gql-about/-/spartan-gql-about-1.0.1.tgz#026df341cf542062204abd9f09e4ce957ce5e95c"
+  integrity sha512-jSyTnkJ3alG4DdzjwOesa69A1H8gIZnY6owXpYL8XY5uITwnxfBgsYv64M8rq2S52XxcQHoBbFYsLXjgqGeKNg==
+  dependencies:
+    "@molonlabe/spartan-stores" "1.0.0"
+    "@molonlabe/spartan-utils" "1.0.0"
+    "@types/lodash" "^4.14.149"
+    apollo-server "^2.9.16"
+    apollo-server-express "^2.9.16"
+    apollo-server-lambda "^2.9.16"
+    aws-lambda "^1.0.5"
+    debug "^4.1.1"
+    express "^4.17.1"
+    firebase-admin "^8.9.1"
+    firebase-functions "^3.3.0"
+    graphql "^14.5.8"
+    graphql-tag "^2.10.1"
+    lodash "^4.17.15"
+    merge-graphql-schemas "^1.7.6"
+
+"@molonlabe/spartan-gql-auth@^1.2.0":
+  version "1.2.0"
+  resolved "https://registry.yarnpkg.com/@molonlabe/spartan-gql-auth/-/spartan-gql-auth-1.2.0.tgz#8d38b6a4b32e392147d1045cd4f5b6500fd04c51"
+  integrity sha512-+hNEi5YGGC7FJFi7R+OgLlzDdtRhpZbJmoNLlHUKarrgrqRY9UbqBEVGhgJK4yAEK9y1+HPNhVsFcCr6yyY4eQ==
+  dependencies:
+    "@molonlabe/spartan-auth" "^1.2.0"
+    "@molonlabe/spartan-stores" "^1.2.0"
+    "@molonlabe/spartan-utils" "^1.2.0"
+    "@types/lodash" "^4.14.149"
+    apollo-server "^2.9.16"
+    apollo-server-express "^2.9.16"
+    apollo-server-lambda "^2.9.16"
+    debug "^4.1.1"
+    express "^4.17.1"
+    firebase-admin "^8.9.1"
+    firebase-functions "^3.3.0"
+    graphql "^14.5.8"
+    graphql-tag "^2.10.1"
+    lodash "^4.17.15"
+    merge-graphql-schemas "^1.7.6"
+
+"@molonlabe/spartan-gql-fire@^1.2.0":
+  version "1.2.0"
+  resolved "https://registry.yarnpkg.com/@molonlabe/spartan-gql-fire/-/spartan-gql-fire-1.2.0.tgz#a6cdcc296d80c40b3d0d646d0078aa2f829fd3b1"
+  integrity sha512-6q3eoAylA5S7yLCc0WNaDl/8HAI+CnIYxYUVuupu11yNn07zszKMS7VQFCgEZME7XqVLq8UM5Uq8SSB1hD9jsQ==
+  dependencies:
+    "@molonlabe/spartan-auth" "^1.2.0"
+    "@molonlabe/spartan-stores" "^1.2.0"
+    "@molonlabe/spartan-utils" "^1.2.0"
+    "@types/lodash" "^4.14.149"
+    apollo-server "^2.9.16"
+    apollo-server-express "^2.9.16"
+    apollo-server-lambda "^2.9.16"
+    debug "^4.1.1"
+    express "^4.17.1"
+    firebase-admin "^8.9.1"
+    firebase-functions "^3.3.0"
+    graphql "^14.5.8"
+    graphql-tag "^2.10.1"
+    lodash "^4.17.15"
+    merge-graphql-schemas "^1.7.6"
+
+"@molonlabe/spartan-stores@1.0.0":
+  version "1.0.0"
+  resolved "https://registry.yarnpkg.com/@molonlabe/spartan-stores/-/spartan-stores-1.0.0.tgz#a91c98b96f81aa11fc258c2c5ecc041120bbe003"
+  integrity sha512-ne/3GzdrEvkWZ693c8CnBFO1eoKxizJlVwUTR+eRYdTrqxXCvnH4LDqvS75on6HB1SCzZln3kzNZ4u0nDXWKXg==
+  dependencies:
+    apollo-server "^2.9.16"
+    debug "^4.1.1"
+    firebase-admin "^8.9.1"
+    graphql "^14.5.8"
+    graphql-tag "^2.10.1"
+    lodash "^4.17.15"
+    mongodb "^3.5.0"
+
+"@molonlabe/spartan-stores@^1.2.0":
+  version "1.2.0"
+  resolved "https://registry.yarnpkg.com/@molonlabe/spartan-stores/-/spartan-stores-1.2.0.tgz#551cc6146b3511d567635e9fcd4a3f6acb8b1553"
+  integrity sha512-yrrqDM5QR5Xp7XE/4cwmLcie1uFeVFVsQw/5nYGhSzaYXqhKBom4y8bi2NDuE4FiHwpUp35YXyQCocuTwcAXog==
+  dependencies:
+    "@types/lodash" "^4.14.149"
+    apollo-server "^2.9.16"
+    debug "^4.1.1"
+    firebase-admin "^8.9.1"
+    graphql "^14.5.8"
+    graphql-tag "^2.10.1"
+    lodash "^4.17.15"
+    mongodb "^3.5.0"
+
+"@molonlabe/spartan-utils@1.0.0":
+  version "1.0.0"
+  resolved "https://registry.yarnpkg.com/@molonlabe/spartan-utils/-/spartan-utils-1.0.0.tgz#6bb04f0a7a9c43ef0be5fff578418f3f185aea53"
+  integrity sha512-DmyF5tAHqKh99rWK7ismuI7+ABXmY7cWupvReqbrJZ5iqCS/tRjluA3WwdC/1Vil2dQHiWk75KtoffwxN+GRhA==
+  dependencies:
+    lodash "^4.17.15"
+
+"@molonlabe/spartan-utils@^1.2.0":
+  version "1.2.0"
+  resolved "https://registry.yarnpkg.com/@molonlabe/spartan-utils/-/spartan-utils-1.2.0.tgz#64a80a086d7d618fa00ab66931f4fbef7511d1f7"
+  integrity sha512-xhSwX4rcGSwtUYQ7sZMK/kLmQDfQmzyw4Su+B3bdy+birNCIouQamAG43pNFyyWVrgB4AO2jJFT10eONs4n6Vw==
+  dependencies:
+    lodash "^4.17.15"
+
 "@mrmlnc/readdir-enhanced@^2.2.1":
   version "2.2.1"
   resolved "https://registry.yarnpkg.com/@mrmlnc/readdir-enhanced/-/readdir-enhanced-2.2.1.tgz#524af240d1a360527b730475ecfa1344aa540dde"
@@ -4607,9 +4721,9 @@ object-keys@^1.0.11, object-keys@^1.0.12, object-keys@^1.1.1:
   integrity sha512-NuAESUOUMrlIXOfHKzD6bpPu3tYt3xvjNdRIQ+FeT0lNb4K8WR70CaDxhuNguS2XG+GjkyMwOzsN5ZktImfhLA==
 
 object-path@^0.11.4:
-  version "0.11.4"
-  resolved "https://registry.yarnpkg.com/object-path/-/object-path-0.11.4.tgz#370ae752fbf37de3ea70a861c23bba8915691949"
-  integrity sha1-NwrnUvvzfePqcKhhwju6iRVpGUk=
+  version "0.11.5"
+  resolved "https://registry.yarnpkg.com/object-path/-/object-path-0.11.5.tgz#d4e3cf19601a5140a55a16ad712019a9c50b577a"
+  integrity sha512-jgSbThcoR/s+XumvGMTMf81QVBmah+/Q7K7YduKeKVWL7N111unR2d6pZZarSk6kY/caeNxUDyxOvMWyzoU2eg==
 
 object-visit@^1.0.0:
   version "1.0.1"
