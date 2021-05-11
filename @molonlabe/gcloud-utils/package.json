@@ -23,7 +23,7 @@
     "commander": "^4.1.1",
     "googleapis": "^47.0.0",
     "isomorphic-fetch": "^2.2.1",
-    "lodash": "^4.17.15"
+    "lodash": "^4.17.21"
   },
   "devDependencies": {
     "@types/isomorphic-fetch": "^0.0.35",
