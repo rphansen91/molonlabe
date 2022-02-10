@@ -2717,6 +2717,13 @@
     lodash "^4.17.15"
     mongodb "^3.5.0"
 
+"@molonlabe/spartan-utils@1.0.0":
+  version "1.0.0"
+  resolved "https://registry.yarnpkg.com/@molonlabe/spartan-utils/-/spartan-utils-1.0.0.tgz#6bb04f0a7a9c43ef0be5fff578418f3f185aea53"
+  integrity sha512-DmyF5tAHqKh99rWK7ismuI7+ABXmY7cWupvReqbrJZ5iqCS/tRjluA3WwdC/1Vil2dQHiWk75KtoffwxN+GRhA==
+  dependencies:
+    lodash "^4.17.15"
+
 "@mrmlnc/readdir-enhanced@^2.2.1":
   version "2.2.1"
   resolved "https://registry.yarnpkg.com/@mrmlnc/readdir-enhanced/-/readdir-enhanced-2.2.1.tgz#524af240d1a360527b730475ecfa1344aa540dde"
@@ -18486,11 +18493,9 @@ umask@^1.1.0:
   integrity sha1-8pzr8B31F5ErtY/5xOUP3o4zMg0=
 
 undefsafe@^2.0.2:
-  version "2.0.2"
-  resolved "https://registry.yarnpkg.com/undefsafe/-/undefsafe-2.0.2.tgz#225f6b9e0337663e0d8e7cfd686fc2836ccace76"
-  integrity sha1-Il9rngM3Zj4Njnz9aG/Cg2zKznY=
-  dependencies:
-    debug "^2.2.0"
+  version "2.0.5"
+  resolved "https://registry.yarnpkg.com/undefsafe/-/undefsafe-2.0.5.tgz#38733b9327bdcd226db889fb723a6efd162e6e2c"
+  integrity sha512-WxONCrssBM8TSPRqN5EmsjVrsv4A8X12J4ArBiiayv3DyyG3ZlIg6yysuuSYdZsVz3TKcTg2fd//Ujd4CHV1iA==
 
 unfetch@^4.1.0:
   version "4.1.0"
